@@ -1,14 +1,22 @@
 <br>
 
-<% @courses.each do |course| %>
+<div class="row">
+  <% @courses.each do |course| %>
 
-  <a href="/solve/course/<%= course.id %>">
-    <div class="card" style="width: 18rem;">
-      <img class="card-img-top" src="" alt="Card image cap">
-      <div class="card-body">
-        <p class="card-text"><%= course.id %> | <%= course.title %></p>
+  <div class="col s5 offset-s1 card">
+    <a href="/solve/course/<%= course.id %>">
+      <div class="card-image waves-effect waves-block waves-light">
+        <img class="activator" style="width: 100%" src="../course<%=course.id%>.jpg">
       </div>
-    </div>
-  </a>
+      <div class="card-content">
+        <span class="card-title activator grey-text text-darken-4"><%= course.title %></span>
+      </div>
+      <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+        <p>Let's solve some math problems!</p>
+      </div>
+    </a>
+  </div>
 
-<% end%>
+  <% end%>
+</div>
