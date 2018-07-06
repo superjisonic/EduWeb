@@ -29,7 +29,8 @@
         <ul id="nav-mobile" class="right hide-on-med-and-down black-text">
           <li><a href="/">SUBJECT</a></li>
           <%if user_signed_in?%>
-            <%=current_user.email%>
+            Hi
+            <%=current_user.name%> ! 
             <li><a href="/home/mypage">MY PAGE</a></li>
             <li><%= link_to 'SIGN OUT', destroy_user_session_path, method: :delete%></li>
           <%else%>
