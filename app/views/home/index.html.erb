@@ -1,0 +1,14 @@
+<br>
+
+<% @courses.each do |course| %>
+
+  <a href="/solve/course/<%= course.id %>">
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="" alt="Card image cap">
+      <div class="card-body">
+        <p class="card-text"><%= course.id %> | <%= course.title %></p>
+      </div>
+    </div>
+  </a>
+
+<% end%>

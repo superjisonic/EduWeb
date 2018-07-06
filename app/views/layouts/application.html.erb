@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>EduWeb :: Data Science Project</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <!-- Compiled and minified CSS -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+   <!-- Compiled and minified JavaScript -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+
+  </head>
+
+  <body>
+
+
+    <nav class="white">
+      <div class="nav-wrapper">
+
+        <a href="/" class="brand-logo black-text">
+          <i class="small material-icons">palette</i>EDU WEB
+        </a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down black-text">
+          <li><a href="/">SUBJECT</a></li>
+          <%if user_signed_in?%>
+            <%=current_user.email%>
+            <li><a href="/home/mypage">MY PAGE</a></li>
+            <li><%= link_to 'SIGN OUT', destroy_user_session_path, method: :delete%></li>
+          <%else%>
+            <li><%= link_to 'SIGN UP', new_user_registration_path%></li>
+            <li><%= link_to 'SIGN IN', new_user_session_path%></li>
+          <%end%>
+
+        </ul>
+
+      </div>
+    </nav>
+
+
+    <div class="container"><%= yield %></div>
+  </body>
+</html>
