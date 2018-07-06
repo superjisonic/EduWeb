@@ -1,2 +1,12 @@
 <h3><%= @course.id %>번 과목</h3>
-<h6>제목 : <%= @course.title %> 페이지 입니다.</h6> <br /> 
+<h6>제목 : <%= @course.title %> 페이지 입니다.</h6> <br />
+
+
+<% @problems.each do |problem| %>
+    <br>
+    <a href="/solve/course/<%= @course.id %>/<%= problem.id%>">
+      <p><%= problem.title %></p>
+    </a>
+    <br>
+    <hr>
+<% end %>

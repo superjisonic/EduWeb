@@ -8,7 +8,8 @@ Rails.application.routes.draw do
 
   get 'solve/course/:course_id' => 'solve#course'
 
-  get 'solve/problem'
+  get '/solve/course/:course_id/:problem_id/' => 'solve#problem'
+
 
   get 'solve/report'
 

@@ -20,13 +20,18 @@ ActiveRecord::Schema.define(version: 20180706012547) do
 
   create_table "problems", force: :cascade do |t|
     t.string "title"
+    t.integer "answer"
+    t.integer "course_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["course_id"], name: "index_problems_on_course_id"
   end
 
   create_table "reports", force: :cascade do |t|
+    t.integer "course_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["course_id"], name: "index_reports_on_course_id"
   end
 
   create_table "users", force: :cascade do |t|
