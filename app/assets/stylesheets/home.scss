@@ -1,3 +1,23 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  font-family: 'Waiting for the Sunrise', cursive;
+  font-size:30px;
+  margin: 10px 50px;
+  letter-spacing: 6px;
+  font-weight: bold;
+}
+
+
+#first-section {
+  height: 50rem;
+  padding: 10rem;
+}
+
+#second-section {
+  height: 40rem;
+  padding: 5rem;
+  background-color:#fafafa;
+}

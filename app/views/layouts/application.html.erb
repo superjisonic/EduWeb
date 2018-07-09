@@ -11,9 +11,12 @@
 
    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+   <link href="https://fonts.googleapis.com/css?family=Waiting+for+the+Sunrise" rel="stylesheet" type="text/css"/>
+
 
    <!-- Compiled and minified JavaScript -->
    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+
 
   </head>
 
@@ -30,7 +33,7 @@
           <li><a href="/">SUBJECT</a></li>
           <%if user_signed_in?%>
             Hi
-            <%=current_user.name%> ! 
+            <%=current_user.name%> !
             <li><a href="/home/mypage">MY PAGE</a></li>
             <li><%= link_to 'SIGN OUT', destroy_user_session_path, method: :delete%></li>
           <%else%>
@@ -44,6 +47,8 @@
     </nav>
 
 
-    <div class="container"><%= yield %></div>
+<%= yield %>
+
+<footer></footer>
   </body>
 </html>

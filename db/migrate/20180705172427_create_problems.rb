@@ -9,7 +9,7 @@ class CreateProblems < ActiveRecord::Migration[5.1]
       t.string :depth
       t.integer :complexity
       t.integer :difficulty
-      t.double :error
+      t.decimal :error
       t.integer :answer
 
       t.timestamps

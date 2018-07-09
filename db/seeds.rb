@@ -5,3 +5,15 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+courses = Course.create([{ title: 'MATH'}, {title: 'ENGLISH'}])
+#
+# # error !!!! course seed
+# courses = Course.create([{ title: 'MATH'}, { title: 'ENGLISH'}])
+# course = [
+#   [1, "MATH"],
+#   [2, "ENGLISH"]
+# ]
+# course.each do |id,title|
+#   Course.create!(id: id, title: title)
+# end

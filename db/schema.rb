@@ -19,9 +19,16 @@ ActiveRecord::Schema.define(version: 20180706012547) do
   end
 
   create_table "problems", force: :cascade do |t|
-    t.string "title"
-    t.integer "answer"
     t.integer "course_id"
+    t.string "pcode"
+    t.string "domain1"
+    t.string "domain2"
+    t.string "domain3"
+    t.string "depth"
+    t.integer "complexity"
+    t.integer "difficulty"
+    t.decimal "error"
+    t.integer "answer"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["course_id"], name: "index_problems_on_course_id"
