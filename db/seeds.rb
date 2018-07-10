@@ -7,16 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 courses = Course.create([{ title: 'MATH'}, {title: 'ENGLISH'}])
-#
-# # error !!!! course seed
-# courses = Course.create([{ title: 'MATH'}, { title: 'ENGLISH'}])
-# course = [
-#   [1, "MATH"],
-#   [2, "ENGLISH"]
-# ]
-# course.each do |id,title|
-#   Course.create!(id: id, title: title)
-# end
 
 # 에러가 너무 나서 주석처리 ㅠㅠ
 # unless Rails.env.production?
