@@ -32,10 +32,10 @@
         <ul id="nav-mobile" class="right hide-on-med-and-down black-text">
           <li><a href="/">SUBJECT</a></li>
           <%if user_signed_in?%>
-            Hi
-            <%=current_user.name%> !
             <li><a href="/home/mypage">MY PAGE</a></li>
             <li><%= link_to 'SIGN OUT', destroy_user_session_path, method: :delete%></li>
+            <li>Hi
+            <%=current_user.name%> !</li>
           <%else%>
             <li><%= link_to 'SIGN UP', new_user_registration_path%></li>
             <li><%= link_to 'SIGN IN', new_user_session_path%></li>

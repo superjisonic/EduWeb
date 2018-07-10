@@ -7,8 +7,18 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 courses = Course.create([{ title: 'MATH'}, {title: 'ENGLISH'}])
+#
+# # error !!!! course seed
+# courses = Course.create([{ title: 'MATH'}, { title: 'ENGLISH'}])
+# course = [
+#   [1, "MATH"],
+#   [2, "ENGLISH"]
+# ]
+# course.each do |id,title|
+#   Course.create!(id: id, title: title)
+# end
 
-# 에러가 너무 나서 주석처리 ㅠㅠ
+# 에러가 너무 나서 주석처리 ㅠ
 # unless Rails.env.production?
 #   connection = ActiveRecord::Base.connection
 #   connection.tables.each do |table|
@@ -35,3 +45,20 @@ def execute_sql_file(path, connection = ActiveRecord::Base.connection)
 end
 
 execute_sql_file('db/problems.sql')
+
+#User dummy data !
+user=[
+["92leekr","92leekr@gmail.com","testtest","testtest"],
+["dkrheik","dkrheik@gmail.com","testtest","testtest"],
+["kwon","kwon@gmail.com","testtest","testtest"],
+["parksj","parksj@gmail.com","testtest","testtest"],
+["tesmm","tesmm@gmail.com","testtest","testtest"],
+["hk2208","hk2208@gmail.com","testtest","testtest"],
+["vincent","vincent@gmail.com","testtest","testtest"],
+["steve","steve@gmail.com","testtest","testtest"],
+["park","park@gmail.com","testtest","testtest"],
+]
+
+user.each do |name,email,password,password_confirmation|
+  User.create!(name: name, email: email,password: password,password_confirmation: password_confirmation)
+end
