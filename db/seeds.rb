@@ -17,3 +17,31 @@ courses = Course.create([{ title: 'MATH'}, {title: 'ENGLISH'}])
 # course.each do |id,title|
 #   Course.create!(id: id, title: title)
 # end
+
+# 에러가 너무 나서 주석처리 ㅠㅠ
+# unless Rails.env.production?
+#   connection = ActiveRecord::Base.connection
+#   connection.tables.each do |table|
+#     connection.execute("TRUNCATE #{table}") unless table == "schema_migrations"
+#   end
+#
+#   sql = File.read('problems.sql')
+#   statements = sql.split(/;$/)
+#   statements.pop
+#
+#   ActiveRecord::Base.transaction do
+#     statements.each do |statement|
+#       connection.execute(statement)
+#     end
+#   end
+# end
+
+
+def execute_sql_file(path, connection = ActiveRecord::Base.connection)
+  require 'active_support/core_ext/object/blank.rb'
+  IO.read(path).split(';').reject(&:blank?).each do |statement|
+    connection.execute(statement)
+  end
+end
+
+execute_sql_file('db/problems.sql')

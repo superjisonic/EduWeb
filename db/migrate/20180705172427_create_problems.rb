@@ -1,6 +1,6 @@
 class CreateProblems < ActiveRecord::Migration[5.1]
   def change
-    create_table :problems do |t|
+    create_table :problem do |t|
       t.belongs_to :course
       t.string :pcode
       t.string :domain1

@@ -1,12 +1,15 @@
-<h3> Course | <%= @course.id %></h3>
-<h6> Title <%= @course.title %></h6> <br />
+<div class="container">
+
+  <h3> Course | <%= @course.id %></h3>
+  <h6> Title <%= @course.title %></h6> <br />
 
 
-<% @problems.each do |problem| %>
-    <br>
-    <a href="/solve/course/<%= @course.id %>/<%= problem.id%>">
-      <p><%= problem.title %></p>
-    </a>
-    <br>
-    <hr>
-<% end %>
+  <% @problems.each do |problem| %>
+      <br>
+      <a href="/solve/course/<%= @course.id %>/<%= problem.id%>">
+        <p><%= problem.title %></p>
+      </a>
+      <br>
+      <hr>
+  <% end %>
+</div>
