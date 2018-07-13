@@ -1,7 +1,7 @@
 class CreateProblems < ActiveRecord::Migration[5.1]
   def change
-    create_table :problem do |t|
-      t.belongs_to :course
+    create_table :problems do |t|
+      t.integer :course_id
       t.string :pcode
       t.string :domain1
       t.string :domain2
@@ -11,6 +11,7 @@ class CreateProblems < ActiveRecord::Migration[5.1]
       t.integer :difficulty
       t.decimal :error
       t.integer :answer
+      t.references :user, foreign_key: true
 
       t.timestamps
     end
