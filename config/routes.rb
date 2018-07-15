@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   get 'solve/course/:course_id' => 'solve#course'
 
   get '/solve/course/:course_id/:problem_id/' => 'solve#problem'
+  
+  post '/solve/course/:course_id/:problem_id/submitAnswer' => 'solve#submitAnswer'
 
 
   get 'solve/report'

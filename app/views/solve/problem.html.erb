@@ -1,7 +1,25 @@
 <div class="container">
-  <h3>Problem | <%= @problem.pcode %></h3>
-  <br>
-  <h6>Domain1 | <%= @problem.domain1 %></h6>
-  <h6>Domain2 | <%= @problem.domain2 %></h6>
-  <h6>Domain3 | <%= @problem.domain3 %></h6>
+  <div class="domaiin-title">
+    <br>
+    <h6>Domain1 | <%= @problem.domain1 %></h6>
+    <h6>Domain2 | <%= @problem.domain2 %></h6>
+    <h6>Domain3 | <%= @problem.domain3 %></h6>
+  </div>
+  <hr>
+  <div class="problem-box">
+    <img class="problem-img" src="/../<%= @problem.pcode%>.png">
+  </div>
+  <form action="/solve/course/<%=@course.id%>/<%=@problem.id%>/submitAnswer" method="post">
+      <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+      <ul class="number-list">
+        <li class="round-button" name="user_answer">1</li>
+        <li class="round-button" name="user_answer">2</li>
+        <li class="round-button" name="user_answer">3</li>
+        <li class="round-button" name="user_answer">4</li>
+        <li class="round-button" name="user_answer">5</li>
+      </ul>
+      <input type="submit" value="제출">
+
+  </form>
 </div>
+
