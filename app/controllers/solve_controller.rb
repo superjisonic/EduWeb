@@ -15,8 +15,9 @@ class SolveController < ApplicationController
   
   def submitAnswer
     
-    @post = Post.new
-    @post.title = params[:input_title]
+    @problem = Problem.find(params[:problem_id])
+    @user = User.find(params[:user_id])
+    @problem.answer = params[:input_title]
     @post.content = params[:input_content]
     @post.save
 
