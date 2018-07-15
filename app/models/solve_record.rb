@@ -1,2 +1,0 @@
-class SolveRecord < ApplicationRecord
-end

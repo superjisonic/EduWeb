@@ -11,7 +11,6 @@ class CreateProblems < ActiveRecord::Migration[5.1]
       t.integer :difficulty
       t.decimal :error
       t.integer :answer
-      t.references :user, foreign_key: true
 
       t.timestamps
     end

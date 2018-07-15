@@ -23,3 +23,9 @@
 .round-button:hover {
     background: #262626;
 }
+
+input[type="radio"]{
+    -webkit-appearance: radio !important;
+    opacity: 1 !important;
+    pointer-events: visible !important;
+}

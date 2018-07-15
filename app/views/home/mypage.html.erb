@@ -1,4 +1,8 @@
-<h1>MY PAGE</h1>
-<ul>
-  <li><%=current_user.name%></li>
-</ul>
+<div class="container">
+  <h1>MY PAGE</h1>
+  <ul>
+    <%if user_signed_in?%>
+    <li><%=current_user.name%></li>
+    <%end%>
+  </ul>
+</div>

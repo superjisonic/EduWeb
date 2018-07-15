@@ -16,12 +16,18 @@ class SolveController < ApplicationController
   def submitAnswer
     
     @problem = Problem.find(params[:problem_id])
-    @user = User.find(params[:user_id])
-    @problem.answer = params[:input_title]
-    @post.content = params[:input_content]
-    @post.save
+    @current_user ||= User.find_by(id: session[:user_id])
+    answer = params[:usrAnswer]
+    answer = answer.to_i
+    
+    if @problem.answer == answer
+      @current_user.correction = 1
+    else
+      @current_user.correction = 0
+    end
+    @current_user.save
 
-    redirect_to "/"
+    redirect_to "solve/report"
     
   end
 
