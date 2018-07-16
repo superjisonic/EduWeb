@@ -25,6 +25,7 @@ class SolveController < ApplicationController
     else
       @current_user.correction = 0
     end
+    
     @current_user.save
 
     redirect_to "solve/report"
