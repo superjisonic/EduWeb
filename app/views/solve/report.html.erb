@@ -1,23 +1,57 @@
 <div class="container">
-  <h3>Self-Report of the Problem</h3>
+  <h3 style="height: 10rem;">Self-Report of the Problem</h3>
   
-  <form action="/solve/<%= @problem.id%>/<%= @record.id %>/submitReport" method="post">
-      <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <div class="report">
+    <form action="/solve/<%= @problem.id%>/<%= @record.id %>/submitReport" method="post">
+        <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+      <div class="report-question">
+        <h6>1번 셀프리포트 : 문제 겪음?</h6>
+        
+        <div class="row">
+          <label class="col s2 offset-s8">
+            <input class="with-gap" type="radio" name="selfReport1" value="1"/>
+            <span> YES  </span>
+          </label>
+          <label class="col s2" id="no">
+            <input class="with-gap" type="radio" name="selfReport1" value="0" />
+            <span> NO  </span>
+          </label>
+        </div>
+      </div>
       
-    <h6>1번 셀프리포트 : 문제 겪음?</h6>
-    <input type="radio" name="selfReport1" value="1"> YES <br>
-    <input type="radio" name="selfReport1" value="0"> NO <br>
-    
-    <h6>2번 셀프리포트 : 문제 겪음?</h6>
-    <input type="radio" name="selfReport2" value="1"> YES <br>
-    <input type="radio" name="selfReport2" value="0"> NO <br>
-    
-    <h6>3번 셀프리포트 : 문제 겪음?</h6>
-    <input type="radio" name="selfReport3" value="1"> YES <br>
-    <input type="radio" name="selfReport3" value="0"> NO <br>
-    
-    <input type="submit" value="제출">
-    
-  </form>
+      <div class="report-question">
+        <h6>2번 셀프리포트 : 문제 겪음?</h6>
+        <div class="row">
+          <label class="col s2 offset-s8">
+            <input class="with-gap" type="radio" name="selfReport2" value="1"/>
+            <span> YES  </span>
+          </label>
+          <label class="col s2" id="no">
+            <input class="with-gap" type="radio" name="selfReport2" value="0" />
+            <span> NO  </span>
+          </label>
+        </div>
+      </div>
+      
+      <div class="report-question">
+        <h6>3번 셀프리포트 : 문제 겪음?</h6>
+        <div class="row">
+          <label class="col s2 offset-s8">
+            <input class="with-gap" type="radio" name="selfReport3" value="1"/>
+            <span> YES  </span>
+          </label>
+          <label class="col s2" id="no">
+            <input class="with-gap" type="radio" name="selfReport3" value="0" />
+            <span> NO  </span>
+          </label>
+        </div>
+      </div>
+      
+      
+      
+      <button class="waves-effect waves-light btn-small" type="submit" value="Submit"><i class="material-icons">palette</i>Submit</button>
+      
+    </form>
+  </div>
 
 </div>

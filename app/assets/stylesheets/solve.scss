@@ -1,50 +1,28 @@
 // Place all the styles related to the solve controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
-.number-list {
-  list-style: none;
+.problem-img {
+  max-width: 100%;
+  height: auto;
 }
-.round-button {
-    display: inline-block;
-    width:30px;
-    height:30px;
-    line-height:30px;
-    border: 2px solid #f5f5f5;
-    border-radius: 50%;
-    color:#f5f5f5;
-    text-align:center;
-    text-decoration:none;
-    background: #464646;
-    box-shadow: 0 0 3px gray;
-    font-size:25px;
-    font-weight:bold;
-}
-.round-button:hover {
-    background: #262626;
-}
-
-
-// input[type="radio"]{
-//     -webkit-appearance: radio !important;
-//     opacity: 1 !important;
-//     pointer-events: visible !important;
-//     display: inline !important;
-// }
 
 span {
   font-size: 30px !important;
   color: black !important;
-  display: inline-block !important;
-}
-label {
-  display: inline !important;
 }
 
 label :hover {
+  width:100% !important;
   background: #b2dfdb !important;
+  
 }
 
 
+.report-question {
+  height : 10rem;
+}
 
-
+#no :hover {
+  background: #ef9a9a !important;
+  width:100%
+}
