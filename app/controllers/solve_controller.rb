@@ -15,20 +15,21 @@ class SolveController < ApplicationController
   
   def submitAnswer
     
+    @record = ProblemRecord.new
     @problem = Problem.find(params[:problem_id])
-    @current_user ||= User.find_by(id: session[:user_id])
+    @record.pcode = @problem.pcode
+    @record.user_id = current_user.id
     answer = params[:usrAnswer]
     answer = answer.to_i
     
     if @problem.answer == answer
-      @current_user.correction = 1
+      @record.correction = 1
     else
-      @current_user.correction = 0
+      @record.correction = 0
     end
+    @record.save
     
-    @current_user.save
-
-    redirect_to "solve/report"
+    redirect_to "/solve/report"
     
   end
 

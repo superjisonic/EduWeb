@@ -9,6 +9,8 @@
   <div class="problem-box">
     <img class="problem-img" src="/../<%= @problem.pcode%>.png">
   </div>
+  
+  <!-- 디자인은 이게 더 예쁜데...ㅠㅠ -->
   <!-- <form action="/solve/course/<%=@course.id%>/<%=@problem.id%>/submitAnswer" method="post">
       <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
       <ul class="number-list">
@@ -37,19 +39,3 @@
   
 </div>
 
-
-<!-- <script>
-$(document).ready(function(){
-  $("li").click(function(){
-    if(clicked){
-                $(this).css('background-color', 'red');
-                clicked  = false;
-            } else {
-                $(this).css('background-color', 'blue');
-                clicked  = true;
-            }   
-        });
-  });
-});
-</script>
- -->

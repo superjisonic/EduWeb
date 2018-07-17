@@ -10,12 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180715212750) do
+ActiveRecord::Schema.define(version: 20180716180937) do
 
   create_table "courses", force: :cascade do |t|
     t.string "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "problem_records", force: :cascade do |t|
+    t.integer "user_id"
+    t.string "pcode"
+    t.integer "correction"
+    t.integer "selfReport1"
+    t.integer "selfReport2"
+    t.integer "selfReport3"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_problem_records_on_user_id"
   end
 
   create_table "problems", force: :cascade do |t|
@@ -54,10 +66,6 @@ ActiveRecord::Schema.define(version: 20180715212750) do
     t.string "last_sign_in_ip"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "correction"
-    t.boolean "selfReport1"
-    t.boolean "selfReport2"
-    t.boolean "selfReport3"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
