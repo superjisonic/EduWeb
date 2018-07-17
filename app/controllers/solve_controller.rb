@@ -1,4 +1,7 @@
 class SolveController < ApplicationController
+  
+  before_action :authenticate_user!, except: [ :course]
+  
   def course
     @course = Course.find(params[:course_id])
     @problems = Problem.all
