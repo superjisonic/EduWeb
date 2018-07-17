@@ -31,6 +31,7 @@ class SolveController < ApplicationController
   end
   
   def report
+    @problem = Problem.find(params[:problem_id])
     @record = ProblemRecord.find(params[:record_id])
     
   end

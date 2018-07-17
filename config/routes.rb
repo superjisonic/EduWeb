@@ -14,7 +14,7 @@ Rails.application.routes.draw do
 
   get '/solve/:problem_id/:record_id/report' => 'solve#report'
   
-  post '/solve/report/submitReport' => 'solve#submitReport'
+  post '/solve/:problem_id/:record_id/submitReport' => 'solve#submitReport'
 
   get 'home/subject'
 
