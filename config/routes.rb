@@ -8,12 +8,13 @@ Rails.application.routes.draw do
 
   get 'solve/course/:course_id' => 'solve#course'
 
-  get '/solve/course/:course_id/:problem_id/' => 'solve#problem'
+  get 'solve/:problem_id' => 'solve#problem'
   
-  post '/solve/course/:course_id/:problem_id/submitAnswer' => 'solve#submitAnswer'
+  post 'solve/:problem_id/submitAnswer' => 'solve#submitAnswer'
 
-
-  get 'solve/report'
+  get '/solve/:problem_id/:record_id/report' => 'solve#report'
+  
+  post '/solve/report/submitReport' => 'solve#submitReport'
 
   get 'home/subject'
 

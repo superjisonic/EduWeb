@@ -1,7 +1,0 @@
-{
-  "name": "EduWeb",
-  "private": true,
-  "dependencies": {
-    "sweetalert2": "^7.25.6"
-  }
-}

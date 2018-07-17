@@ -1,22 +1,19 @@
 class SolveController < ApplicationController
   def course
     @course = Course.find(params[:course_id])
-    # @problems = Problem.all
     @problems = Problem.all
   end
 
   def problem
-    @course = Course.find(params[:course_id])
-    # @problem = Problem.find(params[:problem_id])
+    
     @problem = Problem.find(params[:problem_id])
-
 
   end
   
   def submitAnswer
+    @problem = Problem.find(params[:problem_id])
     
     @record = ProblemRecord.new
-    @problem = Problem.find(params[:problem_id])
     @record.pcode = @problem.pcode
     @record.user_id = current_user.id
     answer = params[:usrAnswer]
@@ -29,10 +26,25 @@ class SolveController < ApplicationController
     end
     @record.save
     
-    redirect_to "/solve/report"
+    redirect_to "/solve/#{@problem.id}/#{@record.id}/report"
     
   end
-
+  
   def report
+    @record = ProblemRecord.find(params[:record_id])
+    
   end
+  
+  def submitReport
+    @problem = Problem.find(params[:problem_id])
+    
+    @record = ProblemRecord.find(params[:record_id])
+    @record.selfReport1 = params[:selfReport1]
+    @record.selfReport2 = params[:selfReport2]
+    @record.selfReport3 = params[:selfReport3]
+    
+    redirect_to "/solve/#{@problem.id + 1}"
+    
+  end
+  
 end

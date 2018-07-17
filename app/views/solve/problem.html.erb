@@ -10,21 +10,7 @@
     <img class="problem-img" src="/../<%= @problem.pcode%>.png">
   </div>
   
-  <!-- 디자인은 이게 더 예쁜데...ㅠㅠ -->
-  <!-- <form action="/solve/course/<%=@course.id%>/<%=@problem.id%>/submitAnswer" method="post">
-      <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
-      <ul class="number-list">
-        <li class="round-button" name="_answer">1</li>
-        <li class="round-button" name="_answer">2</li>
-        <li class="round-button" name="_answer">3</li>
-        <li class="round-button" name="_answer">4</li>
-        <li class="round-button" name="_answer">5</li>
-      </ul>
-      <input type="submit" value="제출">
-
-  </form> -->
-  
-  <form action="/solve/course/<%=@course.id%>/<%=@problem.id%>/submitAnswer" method="post">
+  <form action="/solve/<%=@problem.id%>/submitAnswer" method="post">
       <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
     <input type="radio" name="usrAnswer" value="1">1<br>
     <input type="radio" name="usrAnswer" value="2"> 2<br>
@@ -36,6 +22,7 @@
     
   </form>
   
-  
 </div>
+
+
 
