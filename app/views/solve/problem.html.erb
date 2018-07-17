@@ -12,13 +12,40 @@
   
   <form action="/solve/<%=@problem.id%>/submitAnswer" method="post">
       <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
-    <input type="radio" name="usrAnswer" value="1">1<br>
-    <input type="radio" name="usrAnswer" value="2"> 2<br>
-    <input type="radio" name="usrAnswer" value="3"> 3<br>
-    <input type="radio" name="usrAnswer" value="4"> 4<br>
-    <input type="radio" name="usrAnswer" value="5"> 5
     
-    <input type="submit" value="제출">
+    <p>
+      <label>
+        <input class="with-gap" type="radio" name="usrAnswer" value="1" />
+        <span> 1  </span>
+      </label>
+    </p>
+    <p>
+      <label>
+        <input class="with-gap" type="radio" name="usrAnswer" value="2" />
+        <span> 2  </span>
+      </label>
+    </p>
+    <p>
+      <label>
+        <input class="with-gap" type="radio" name="usrAnswer" value="3" />
+        <span> 3  </span>
+      </label>
+    </p>
+    <p>
+      <label>
+        <input class="with-gap" type="radio" name="usrAnswer" value="4" />
+        <span> 4  </span>
+      </label>
+    </p>
+    <p>
+      <label>
+        <input class="with-gap" type="radio" name="usrAnswer" value="5" />
+        <span> 5  </span>
+      </label>
+    </p>
+    
+    
+  <input type="submit" value="제출">
     
   </form>
   

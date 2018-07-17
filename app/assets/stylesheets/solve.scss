@@ -24,8 +24,27 @@
     background: #262626;
 }
 
-input[type="radio"]{
-    -webkit-appearance: radio !important;
-    opacity: 1 !important;
-    pointer-events: visible !important;
+
+// input[type="radio"]{
+//     -webkit-appearance: radio !important;
+//     opacity: 1 !important;
+//     pointer-events: visible !important;
+//     display: inline !important;
+// }
+
+span {
+  font-size: 30px !important;
+  color: black !important;
+  display: inline-block !important;
 }
+label {
+  display: inline !important;
+}
+
+label :hover {
+  background: #b2dfdb !important;
+}
+
+
+
+

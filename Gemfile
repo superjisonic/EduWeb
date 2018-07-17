@@ -9,6 +9,8 @@ gem 'rails_db'
 
 gem 'devise'
 
+gem 'bourbon'
+
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
