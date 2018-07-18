@@ -9,15 +9,25 @@ body {
   letter-spacing: 6px;
   font-weight: bold;
 }
+.main-section {
+  margin: 6% auto;
+  background-image: url('einstein.png');
+  background-size: cover;
+  width: 100%;
+  height: auto;
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+}
 
-
-#first-section {
-  height: 50rem;
-  padding: 10rem;
+#typedtext {
+  display: inline-block;
+  margin: 10%;
+  height: 300px;
+  color: white;
 }
 
 #second-section {
-  height: 40rem;
-  padding: 5rem;
-  background-color:#fafafa;
+  height: 45rem;
+  background-color:#eeeeee;
+  margin-bottom: 3rem
 }

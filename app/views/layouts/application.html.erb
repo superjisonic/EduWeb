@@ -34,7 +34,7 @@
           <i class="small material-icons">palette</i>ThinkBig
         </a>
         <ul id="nav-mobile" class="right hide-on-med-and-down black-text">
-          <li><a href="/">SUBJECT</a></li>
+          <li><a href="/#second-section">COURSES</a></li>
           <%if user_signed_in?%>
             <li><a href="/home/mypage">MY PAGE</a></li>
             <li><%= link_to 'SIGN OUT', destroy_user_session_path, method: :delete%></li>
@@ -54,6 +54,8 @@
 
 <%= yield %>
 
-<footer></footer>
+<footer>
+  
+</footer>
   </body>
 </html>

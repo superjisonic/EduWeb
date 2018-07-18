@@ -11,6 +11,8 @@ gem 'devise'
 
 gem 'bourbon'
 
+gem 'pg', group: :production
+
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
