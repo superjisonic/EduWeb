@@ -4,10 +4,8 @@ class CreateProblemRecords < ActiveRecord::Migration[5.1]
       t.references :user
       
       t.integer :user_id, foreign_key:true
-      add_foreign_key :users, :user_id
       
       t.string :pcode, foreign_key: true
-      add_foreign_key :problems, :pcode
       
       t.integer :correction
       t.integer :selfReport1
