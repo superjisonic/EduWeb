@@ -5,11 +5,13 @@
 
 
   <% @problems.each do |problem| %>
-      <br>
-      <a href="/solve/<%= problem.id%>">
-        <h6><%= problem.domain1 %>|<%= problem.domain2 %>|<%= problem.domain3 %></h6>
-      </a>
-      <br>
+      <div class="problem_area">
+        <br>
+          <a href="/solve/<%= problem.id%>">
+            <h6><%= problem.domain1 %>|<%= problem.domain2 %>|<%= problem.domain3 %></h6>
+          </a>
+        <br>
+      </div>
       <hr>
   <% end %>
 </div>
