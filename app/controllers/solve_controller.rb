@@ -47,6 +47,8 @@ class SolveController < ApplicationController
     @record.selfReport2 = params[:selfReport2]
     @record.selfReport3 = params[:selfReport3]
     
+    @record.save
+    
     redirect_to "/solve/#{@problem.id + 1}"
     
   end
