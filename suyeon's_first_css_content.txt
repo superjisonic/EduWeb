@@ -1,0 +1,4 @@
+180719 suyeon's first css commit content
+
+- footer 하단 고정
+- 나눔명조 한글 폰트 적용 
