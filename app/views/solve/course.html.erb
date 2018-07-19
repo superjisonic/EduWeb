@@ -3,15 +3,21 @@
   <h3> Course  <%= @course.id %></h3>
   <h6> Title <%= @course.title %></h6> <br />
 
-
-  <% @problems.each do |problem| %>
-      <div class="problem_area">
-        <br>
-          <a href="/solve/<%= problem.id%>">
-            <h6><%= problem.domain1 %>|<%= problem.domain2 %>|<%= problem.domain3 %></h6>
-          </a>
-        <br>
-      </div>
-      <hr>
-  <% end %>
+  <div class="problem-list">
+    <% @problems.each do |problem| %>
+        <div class="problem_area">
+          <br>
+            <a href="/solve/<%= problem.id%>">
+              <h6><%= problem.domain1 %>|<%= problem.domain2 %>|<%= problem.domain3 %></h6>
+            </a>
+          <br>
+        </div>
+        <hr>
+    <% end %>
+  </div>
+  
+  <div class="center">
+    <%= will_paginate @problems %>
+  </div>
+  
 </div>

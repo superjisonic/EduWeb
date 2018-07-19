@@ -7,6 +7,8 @@ end
 
 gem 'rails_db'
 
+gem 'will_paginate'
+
 gem 'devise'
 gem 'jquery-rails' 
 gem 'sweetalert2' 
