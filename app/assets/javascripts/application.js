@@ -13,3 +13,26 @@
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
+
+function btnClick1()
+{
+  swal({
+title: "정답입니다!",
+text: "잘하셨어요! 다른 문제도 풀어봐요!",
+type: "success",
+confirmButtonText: "다음문제"
+}).then(function(){
+ showSlides(slideIndex += 1);
+ 
+
+})
+}
+       
+function btnClick2()
+{
+  sweetAlert("분발하세요ㅠ", "다시 한번 풀어봐요!", "error");
+}   
+ function change1(obj){
+     obj.style.background = '#83c9b0';
+     obj.style.color = 'white';
+ }

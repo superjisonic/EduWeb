@@ -8,6 +8,9 @@ end
 gem 'rails_db'
 
 gem 'devise'
+gem 'jquery-rails' 
+gem 'sweetalert2' 
+gem 'rails-sweetalert2-confirm' 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.6'

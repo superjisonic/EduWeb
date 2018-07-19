@@ -13,7 +13,10 @@
 
    <link href="https://fonts.googleapis.com/css?family=Waiting+for+the+Sunrise" rel="stylesheet" type="text/css"/>
    
+   <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo" rel="stylesheet" type="text/css"/>
+   
    <!-- <link rel="stylesheet" type="text/css" href="../sweetalert2.css"> -->
+   <link rel="stylesheet" type="text/css" href="../sweetalert.css">
 
 
    <!-- Compiled and minified JavaScript -->
@@ -21,6 +24,7 @@
    
    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
    
+   <script src="dist/sweetalert.min.js"></script>
    <!-- <script src="../sweetalert2.min.js"></script> -->
 
 
@@ -53,14 +57,15 @@
 
 
 <%= yield %>
-
-  <footer class="row">
-    <h6 class="right">Copyright © Jiseon Sim All Rights Reserved</h6>
-  </footer>
-  <script>
-    $(document).ready(function(){
-     $('.sidenav').sidenav();
-    });
-  </script>
+  <div class="content"></div>
+    <footer class="container">
+      <div class="row">
+        <p class="center"><b>2018 Copyright © ThinkBig All Rights Reserved</b>
+        <br>
+        Kanghyeon + Kyeorye + Gyusu + Jiseon + Suyeon + Chaejung = Perfect Team
+      </p>
+      </div>
+    </footer>
+  
 </body>
 </html>

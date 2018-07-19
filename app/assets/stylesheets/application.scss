@@ -13,12 +13,18 @@
  *= require_tree .
  *= require_self
  */
-
+ 
+ 
  .nav-wrapper ul li a{
    color: black;
  }
  
  footer {
    display: block;
-   font-size: 0.5em;
+   font-size: 0.4em;
  }
+
+ .content {
+   min-height: calc(100vh - 600px);
+ }//푸터 바닥 고정//
+ 
